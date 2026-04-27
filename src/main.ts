@@ -23,7 +23,7 @@ async function bootstrap() {
 
   // Serve Swagger UI
   const swaggerDocument = JSON.parse(
-    fs.readFileSync(path.join(process.cwd(), 'src', 'swagger.json'), 'utf8'),
+    fs.readFileSync(path.join(__dirname, 'swagger.json'), 'utf8'),
   );
   app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
