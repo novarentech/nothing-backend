@@ -20,8 +20,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --config ./jest.json --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
-    },
-    "dependencies": {
+  },
+  "dependencies": {
     "@aws-sdk/client-s3": "^3.1037.0",
     "@nestjs/common": "^11.0.1",
     "@nestjs/core": "^11.0.1",
@@ -41,8 +41,8 @@
     "swagger-ui-express": "^5.0.1",
     "typeorm": "^0.3.28",
     "zod": "^4.3.6"
-    },
-    "devDependencies": {
+  },
+  "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.18.0",
     "@nestjs/cli": "^11.0.0",
@@ -67,8 +67,8 @@
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0"
-    },
-    "jest": {
+  },
+  "jest": {
     "moduleFileExtensions": [
       "js",
       "json",
@@ -88,7 +88,9 @@
       "<rootDir>/src/**/*.integration-spec.ts",
       "<rootDir>/test/**/*.e2e-spec.ts"
     ],
-    "setupFilesAfterEnv": ["<rootDir>/test/setup-jest.ts"],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup-jest.ts"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 100,
@@ -97,7 +99,5 @@
         "statements": 100
       }
     }
-    }
-    }
-
+  }
 }
